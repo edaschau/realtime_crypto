@@ -37,6 +37,34 @@ def get_models():
                 "top_k": 40,
             }
         },
+
+        {
+            "name": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+            "params": {
+                "temperature": 0.1,
+                "top_p": 0.9,
+                "repetition_penalty": 0.5,
+                "top_k": 40,
+            }
+        },
+        {
+            "name": "meta-llama/Meta-Llama-3-8B-Instruct-Lite",
+            "params": {
+                "temperature": 0.1,
+                "top_p": 0.9,
+                "repetition_penalty": 0.5,
+                "top_k": 40,
+            }
+        }, 
+        {
+            "name": "google/gemma-2b-it",
+            "params": {
+                "temperature": 0.1,
+                "top_p": 0.9,
+                "repetition_penalty": 0.5,
+                "top_k": 40,
+            }
+        },                  
     ]
 
 # Crypto keywords

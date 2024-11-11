@@ -34,4 +34,5 @@ def handle_cookie_consent(driver):
         reject_button.click()
         logging.info("Cookie consent handled.")
     except Exception as e:
-        logging.warning(f"Failed to handle cookie consent: {e}")
+        pass
+        # logging.warning(f"Failed to handle cookie consent: {e}")

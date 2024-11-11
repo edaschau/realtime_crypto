@@ -2,11 +2,13 @@ import logging
 from together import Together
 from keys.together import together_api_key
 import params
+import random
 
 NEWS_PROMPTS = params.get_news_prompts()
 TWITTER_PROMPTS = params.get_twitter_prompts()
 
 def get_model_responses(message, model, crypto_name, is_twitter=False):
+    print(model)
     responses = {}
     
     prompts = TWITTER_PROMPTS if is_twitter else NEWS_PROMPTS
@@ -33,8 +35,10 @@ def get_model_responses(message, model, crypto_name, is_twitter=False):
                 ],
                 **model['params']
             )
+            print(response)
             
             score = response.choices[0].message.content.strip()
+            # score = random.randint(1,10)
             print(f"Aspect: {prompt['aspect']}, Score: {score}")
             
             try:

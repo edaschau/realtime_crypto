@@ -131,7 +131,7 @@ def store_article(url, article_data):
     
     title = str(article_data.get('title')) if article_data.get('title') is not None else None
     author = str(article_data.get('author')) if article_data.get('author') is not None else None
-    datetime_str = str(article_data.get('datetime')[0]) if article_data.get('datetime') is not None else None
+    datetime_str = str(article_data.get('datetime')) if article_data.get('datetime') is not None else None
     content = str(article_data.get('article')) if article_data.get('article') is not None else None
     ticker_symbols = json.dumps(article_data.get('ticker_symbols')) if article_data.get('ticker_symbols') is not None else None
     

@@ -11,6 +11,7 @@ from utils.scrape import get_new_articles
 from utils.database import initialize_database
 from utils.sentimemt import get_model_responses
 from utils.twitter import process_twitter_data
+from utils.analysis import calculate_hourly_averages
 import params
 
 from selenium import webdriver
@@ -51,8 +52,10 @@ def main():
     try:
         while True:
             get_new_articles(driver)
-            process_twitter_data()
+            # process_twitter_data()
+            calculate_hourly_averages()
             time.sleep(60)
+
 
     except KeyboardInterrupt:
         logging.info("Scraper manually terminated.")
